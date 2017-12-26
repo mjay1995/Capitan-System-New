@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="createNew" prefHeight="776.0" prefWidth="1165.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.circuit.main.RegisterController">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="776.0" prefWidth="221.0" style="-fx-background-color: #20293c;">
+         <children>
+            <Pane prefHeight="57.0" prefWidth="221.0">
+               <children>
+                  <Label layoutX="59.0" layoutY="11.0" prefHeight="37.0" prefWidth="134.0" text="Capitan" textFill="WHITE">
+                     <font>
+                        <Font name="Ubuntu" size="26.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/city-logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="11.0" layoutY="57.0" prefHeight="289.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="dashboardButton" alignment="TOP_LEFT" graphicTextGap="10.0" layoutY="22.0" lineSpacing="10.0" onAction="#openHome" prefHeight="37.0" prefWidth="200.0" text="Dashboard" textFill="#656565">
+                     <font>
+                        <Font name="Ubuntu" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="createNewButton" alignment="TOP_LEFT" graphicTextGap="10.0" layoutY="59.0" lineSpacing="10.0" onAction="#createNewApp" prefHeight="37.0" prefWidth="200.0" text="Create New" textFill="#656565">
+                     <font>
+                        <Font name="Ubuntu" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="managementButton" alignment="TOP_LEFT" graphicTextGap="10.0" layoutY="133.0" lineSpacing="10.0" onAction="#manageDataButton" prefHeight="37.0" prefWidth="200.0" text="Management" textFill="#656565">
+                     <font>
+                        <Font name="Ubuntu" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="recordsButton" alignment="TOP_LEFT" graphicTextGap="10.0" layoutY="96.0" lineSpacing="10.0" onAction="#viewRecords" prefHeight="37.0" prefWidth="200.0" text="Records" textFill="#656565">
+                     <font>
+                        <Font name="Ubuntu" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="228.0" prefHeight="776.0" prefWidth="945.0">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="221.0" layoutX="373.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/city-logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="704.0" layoutY="57.0" text="Control No:" />
+            <Label fx:id="control_no" layoutX="773.0" layoutY="57.0" prefHeight="17.0" prefWidth="144.0" />
+            <Label layoutX="704.0" layoutY="80.0" text="Date:" />
+            <Label fx:id="date_label" layoutX="773.0" layoutY="80.0" prefHeight="17.0" prefWidth="144.0" />
+            <Pane fx:id="clearancePane" layoutX="14.0" layoutY="266.0" prefHeight="496.0" prefWidth="917.0">
+               <children>
+                  <Pane fx:id="brgyPane" layoutX="-1.0" prefHeight="496.0" prefWidth="920.0">
+                     <children>
+                        <JFXTextField fx:id="lastNameField" layoutX="185.0" layoutY="158.0" prefHeight="25.0" prefWidth="231.0" />
+                        <Label layoutX="63.0" layoutY="64.0" prefHeight="19.0" prefWidth="97.0" text="First Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="62.0" layoutY="161.0" prefHeight="19.0" prefWidth="97.0" text="Last Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="63.0" layoutY="113.0" text="Middle Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="62.0" layoutY="201.0" text="Gender:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="63.0" layoutY="246.0" text="Birthdate:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="63.0" layoutY="381.0" text="Age:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="62.0" layoutY="424.0" text="Citizenship:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="496.0" layoutY="89.0" text="Address:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="494.0" layoutY="122.0" text="Barangay:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="63.0" layoutY="289.0" text="City:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="62.0" layoutY="341.0" text="Remarks:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="firstNameField" layoutX="186.0" layoutY="61.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="middleNameField" layoutX="187.0" layoutY="110.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXComboBox fx:id="genderType" layoutX="187.0" layoutY="198.0" prefHeight="25.0" prefWidth="134.0" />
+                        <JFXDatePicker fx:id="birthdate" layoutX="185.0" layoutY="242.0" prefHeight="28.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="cityField" layoutX="185.0" layoutY="286.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="remarksField" layoutX="187.0" layoutY="338.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="ageField" layoutX="185.0" layoutY="378.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="citizenshipField" layoutX="186.0" layoutY="421.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="addressField" layoutX="613.0" layoutY="86.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="barangayField" disable="true" editable="false" layoutX="615.0" layoutY="119.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXButton fx:id="submitButton" layoutX="670.0" layoutY="394.0" onAction="#printBrgyClearance" text="Print">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="saveButton" layoutX="563.0" layoutY="394.0" onAction="#saveBrgyClearanceRecord" text="Save">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <Pane fx:id="webcamPane" layoutX="530.0" layoutY="173.0" prefHeight="207.0" prefWidth="231.0" style="-fx-border-color: #000000;">
+                           <children>
+                              <ImageView fx:id="profilePicId" fitHeight="207.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="499.0" layoutY="55.0" text="Civil Status">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="civilStat" layoutX="615.0" layoutY="52.0" prefHeight="25.0" prefWidth="134.0" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="busPane" prefHeight="496.0" prefWidth="920.0" visible="false">
+                     <children>
+                        <JFXTextField fx:id="BusLastNameField" layoutX="186.0" layoutY="180.0" prefHeight="25.0" prefWidth="231.0" />
+                        <Label layoutX="40.0" layoutY="83.0" prefHeight="19.0" prefWidth="97.0" text="First Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="180.0" prefHeight="19.0" prefWidth="97.0" text="Last Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="132.0" text="Middle Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="220.0" text="Business Type:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="265.0" text="Business Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="346.0" text="Building Type:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="38.0" layoutY="389.0" text="Ownership:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="500.0" layoutY="26.0" text="Remarks:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="433.0" text="Recommendations:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="308.0" text="Business Address:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="38.0" layoutY="26.0" text="Application Type:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="busFirstNameField" layoutX="187.0" layoutY="83.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BusMiddleNameField" layoutX="188.0" layoutY="132.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXComboBox fx:id="BusType" layoutX="188.0" layoutY="220.0" prefHeight="25.0" prefWidth="134.0" />
+                        <JFXTextField fx:id="BusAddress" layoutX="186.0" layoutY="308.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BldgType" layoutX="185.0" layoutY="345.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BusOwn" layoutX="186.0" layoutY="388.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BusRemarks" layoutX="617.0" layoutY="23.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BusBarangayField" disable="true" editable="false" layoutX="617.0" layoutY="99.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXButton fx:id="submitButton1" layoutX="672.0" layoutY="379.0" onAction="#printBusRec" text="Print">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="saveButton1" layoutX="572.0" layoutY="379.0" onAction="#saveBusRecord" text="Save">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <Pane fx:id="webcamPane2" layoutX="533.0" layoutY="170.0" prefHeight="207.0" prefWidth="231.0" style="-fx-border-color: #000000;">
+                           <children>
+                              <ImageView fx:id="profilePicId2" fitHeight="207.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <JFXTextField fx:id="BusName" layoutX="186.0" layoutY="265.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXComboBox fx:id="BusType1" layoutX="187.0" layoutY="23.0" prefHeight="25.0" prefWidth="134.0" />
+                        <Label layoutX="500.0" layoutY="61.0" text="Fee:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="BusFee" layoutX="617.0" layoutY="58.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BusReco" layoutX="188.0" layoutY="430.0" prefHeight="25.0" prefWidth="231.0" />
+                        <Label layoutX="497.0" layoutY="102.0" text="Barangay:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="bailPane" prefHeight="496.0" prefWidth="920.0" visible="false">
+                     <children>
+                        <JFXTextField fx:id="BusLastNameField1" layoutX="186.0" layoutY="180.0" prefHeight="25.0" prefWidth="231.0" />
+                        <Label layoutX="40.0" layoutY="83.0" prefHeight="19.0" prefWidth="97.0" text="First Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="180.0" prefHeight="19.0" prefWidth="97.0" text="Last Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="132.0" text="Middle Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="220.0" text="Business Type:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="265.0" text="Business Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="346.0" text="Building Type:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="38.0" layoutY="389.0" text="Ownership:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="500.0" layoutY="26.0" text="Remarks:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="433.0" text="Recommendations:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="308.0" text="Business Address:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="38.0" layoutY="26.0" text="Application Type:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="busFirstNameField1" layoutX="187.0" layoutY="83.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BusMiddleNameField1" layoutX="188.0" layoutY="132.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXComboBox fx:id="bailType" layoutX="188.0" layoutY="220.0" prefHeight="25.0" prefWidth="134.0" />
+                        <JFXTextField fx:id="BusAddress1" layoutX="186.0" layoutY="308.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BldgType1" layoutX="185.0" layoutY="345.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BusOwn1" layoutX="186.0" layoutY="388.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BusRemarks1" layoutX="617.0" layoutY="23.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="bailBrgyField" disable="true" editable="false" layoutX="617.0" layoutY="99.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXButton fx:id="submitButton11" layoutX="681.0" layoutY="374.0" onAction="#printBailRecord" text="Print">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="saveButton11" layoutX="579.0" layoutY="374.0" onAction="#saveBailRecord" text="Save">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <Pane fx:id="webcamPane11" layoutX="543.0" layoutY="163.0" prefHeight="207.0" prefWidth="231.0" style="-fx-border-color: #000000;">
+                           <children>
+                              <ImageView fx:id="profilePicId11" fitHeight="207.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <JFXTextField fx:id="BusName1" layoutX="186.0" layoutY="265.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXComboBox fx:id="BusType11" layoutX="187.0" layoutY="23.0" prefHeight="25.0" prefWidth="134.0" />
+                        <Label layoutX="500.0" layoutY="61.0" text="Fee:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="BusFee1" layoutX="617.0" layoutY="58.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BusReco1" layoutX="188.0" layoutY="430.0" prefHeight="25.0" prefWidth="231.0" />
+                        <Label layoutX="497.0" layoutY="102.0" text="Barangay:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pedPane" prefHeight="496.0" prefWidth="920.0" visible="false">
+                     <children>
+                        <JFXTextField fx:id="BusLastNameField2" layoutX="186.0" layoutY="180.0" prefHeight="25.0" prefWidth="231.0" />
+                        <Label layoutX="40.0" layoutY="83.0" prefHeight="19.0" prefWidth="97.0" text="First Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="180.0" prefHeight="19.0" prefWidth="97.0" text="Last Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="132.0" text="Middle Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="220.0" text="Business Type:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="265.0" text="Business Name:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="346.0" text="Building Type:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="38.0" layoutY="389.0" text="Ownership:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="500.0" layoutY="26.0" text="Remarks:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="433.0" text="Recommendations:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="308.0" text="Business Address:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="38.0" layoutY="26.0" text="Application Type:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="busFirstNameField2" layoutX="187.0" layoutY="83.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BusMiddleNameField2" layoutX="188.0" layoutY="132.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXComboBox fx:id="pedType" layoutX="188.0" layoutY="220.0" prefHeight="25.0" prefWidth="134.0" />
+                        <JFXTextField fx:id="BusAddress2" layoutX="186.0" layoutY="308.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BldgType2" layoutX="185.0" layoutY="345.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BusOwn2" layoutX="186.0" layoutY="388.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BusRemarks2" layoutX="617.0" layoutY="23.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="PedBrgyField" disable="true" editable="false" layoutX="617.0" layoutY="99.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXButton fx:id="submitButton12" layoutX="671.0" layoutY="385.0" onAction="#printPedRecord" text="Print">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="saveButton12" layoutX="569.0" layoutY="385.0" onAction="#savePedRecord" text="Save">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <Pane fx:id="webcamPane12" layoutX="533.0" layoutY="164.0" prefHeight="207.0" prefWidth="231.0" style="-fx-border-color: #000000;">
+                           <children>
+                              <ImageView fx:id="profilePicId12" fitHeight="207.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <JFXTextField fx:id="BusName2" layoutX="186.0" layoutY="265.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXComboBox fx:id="BusType12" layoutX="187.0" layoutY="23.0" prefHeight="25.0" prefWidth="134.0" />
+                        <Label layoutX="500.0" layoutY="61.0" text="Fee:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="BusFee2" layoutX="617.0" layoutY="58.0" prefHeight="25.0" prefWidth="231.0" />
+                        <JFXTextField fx:id="BusReco2" layoutX="188.0" layoutY="430.0" prefHeight="25.0" prefWidth="231.0" />
+                        <Label layoutX="497.0" layoutY="102.0" text="Barangay:">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <JFXComboBox fx:id="registerType" layoutX="177.0" layoutY="135.0" onAction="#regTypePick" prefHeight="25.0" prefWidth="193.0" />
+            <Label layoutX="14.0" layoutY="141.0" prefHeight="19.0" prefWidth="163.0" text="Type Of Registration:">
+               <font>
+                  <Font name="Ubuntu" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
