@@ -1,3 +1,49 @@
+<<<<<<< HEAD
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.circuit.obj;
+/**
+ *
+ * @author Marvin
+ */
+public class LuponTagapagkasundo {
+    
+    
+    int id;
+    String complainantRespondent;
+    String remarks;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getComplainantRespondent() {
+        return complainantRespondent;
+    }
+
+    public void setComplainantRespondent(String complainantRespondent) {
+        this.complainantRespondent = complainantRespondent;
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+    
+    
+    
+}
+=======
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -43,3 +89,4 @@ public class LuponTagapagkasundo {
     
     
 }
+>>>>>>> 2ab93fcef3975e1f2819e3d73b99eb62239bf359
